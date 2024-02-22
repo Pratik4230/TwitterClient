@@ -1,3 +1,4 @@
+import FeedCard from "@/components/FeedCard";
 import Image from "next/image";
 import React from "react";
 import {FaTwitter , FaHashtag, FaHome, FaBell, FaEnvelope, FaBookmark, FaUser} from "react-icons/fa";
@@ -39,7 +40,7 @@ const sidebarMenuItems : TwitterSidebarButton[] = [
 
 export default function Home() {
   return (
-   <div className="grid grid-cols-12 h-screen w-screen px-52">
+   <div className="grid grid-cols-12 h-screen w-99% px-52">
 
       {/* first coloumn */}
       <div className="col-span-3 border border-red-500  py-7 " >
@@ -66,8 +67,20 @@ export default function Home() {
       </div>
 
 
-      <div className="col-span-6 border-x-2 border-x-slate-500  " ></div>
-      <div className="col-span-3 border border-red-500 " ></div>
+      <div className="col-span-5 border-x-2 border-x-slate-500 h-screen overflow-scroll no-scrollbar " > 
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+        <FeedCard/>
+      </div>
+      <div className="col-span-4 border border-red-500 " ></div>
     </div>
   );
 }
